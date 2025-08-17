@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "12437144034",
+    "firebase_url": "https://driver2-b955f-default-rtdb.firebaseio.com",
+    "project_id": "driver2-b955f",
+    "storage_bucket": "driver2-b955f.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:12437144034:android:accb97da74208f44bf39bb",
+        "android_client_info": {
+          "package_name": "com.example.driver_app2"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA4hONbehkGNIeZw743HJXq2H2Dyf9aW7s"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
