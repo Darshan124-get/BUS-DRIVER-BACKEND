@@ -90,6 +90,67 @@ exports.getAssignedTrip = async (req, res) => {
   }
 };
 
+// Update location for a vehicle
+exports.updateLocation = async (req, res) => {
+  try {
+    const { 
+      vehicleNumber, 
+      tripId, 
+      latitude, 
+      longitude, 
+      timestamp, 
+      accuracy, 
+      altitude, 
+      speed, 
+      heading 
+    } = req.body;
+    
+    // Validate required fields
+    if (!vehicleNumber || !tripId || !latitude || !longitude) {
+      return res.status(400).json({
+        status: 'error',
+        message: 'Vehicle number, trip ID, latitude, and longitude are required'
+      });
+    }
+    
+    // For now, just log the location update
+    // In a real implementation, you would save this to a database
+    console.log('Location update received:', {
+      vehicleNumber,
+      tripId,
+      latitude,
+      longitude,
+      timestamp: new Date(timestamp),
+      accuracy,
+      altitude,
+      speed,
+      heading
+    });
+    
+    // TODO: Save location data to database
+    // You can create a Location model and save the data here
+    
+    return res.status(200).json({
+      status: 'success',
+      message: 'Location updated successfully',
+      data: {
+        vehicleNumber,
+        tripId,
+        latitude,
+        longitude,
+        timestamp: new Date(timestamp)
+      }
+    });
+    
+  } catch (error) {
+    console.error('Error updating location:', error);
+    return res.status(500).json({
+      status: 'error',
+      message: 'Server error: ' + error.message
+    });
+  }
+};
+
 // Seed initial bus assignments (for testing)
 exports.seedBusAssignments = async (req, res) => {
   try {

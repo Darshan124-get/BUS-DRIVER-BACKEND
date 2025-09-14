@@ -11,6 +11,12 @@ const sampleBuses = [
     capacity: 45
   },
   {
+    vehicleNumber: 'KA06F2005',
+    driverName: 'Rajesh Kumar',
+    busType: 'AC',
+    capacity: 45
+  },
+  {
     vehicleNumber: 'KA01B1234',
     driverName: 'Suresh Kumar',
     busType: 'Non-AC',
